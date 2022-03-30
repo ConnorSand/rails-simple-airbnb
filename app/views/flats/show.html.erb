@@ -1,0 +1,6 @@
+<h1><%= @flat.name%> - Price: <%= @flat.price_per_night%>$</h1>
+
+<h2><%= link_to "Edit", edit_flat_path(@flat.id) %> - <%= link_to "Delete",
+            flat_path(@flat),
+            method: :delete,
+            data: { confirm: "Are you sure? You won't be able to retreive this" } %></h2>

@@ -1,0 +1,8 @@
+<h1>All Flats</h1>
+<h2><%= link_to "Add a flat", new_flat_path  %></h2>
+<% @flats.each do |flat| %>
+  <h3><%= link_to flat.name, flat_path(flat.id)  %> - <%= link_to "Edit", edit_flat_path(flat.id) %> - <%= link_to "Delete",
+            flat_path(flat),
+            method: :delete,
+            data: { confirm: "Are you sure? You won't be able to retreive this" } %></h3>
+<% end %>
